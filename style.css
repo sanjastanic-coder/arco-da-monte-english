@@ -64,13 +64,13 @@ body {
 }
 
 .nav-links a:hover {
-    color: #0056b3; /* Blu leggermente più chiaro sulle interazioni */
+    color: #0056b3;
 }
 
-/* HERO SECTION (BLU) */
+/* HERO SECTION */
 .hero-section {
     position: relative;
-    background: linear-gradient(135deg, #0056b3 0%, #003366 100%); /* Blu più chiaro rispetto all'originale */
+    background: linear-gradient(135deg, #0056b3 0%, #003366 100%);
     color: white;
     padding: 100px 20px;
     text-align: center;
@@ -105,7 +105,7 @@ body {
 
 .btn-primary {
     display: inline-block;
-    background-color: #c53030; /* Bottone rosso per la prenotazione */
+    background-color: #c53030; /* Bottone rosso prenota */
     color: #fff;
     padding: 12px 25px;
     border-radius: 5px;
@@ -115,7 +115,7 @@ body {
 }
 
 .btn-primary:hover {
-    background-color: #a62626; /* Rosso più scuro al passaggio del mouse */
+    background-color: #a62626;
 }
 
 /* PRESENTAZIONE LOCANDINA */
@@ -186,14 +186,14 @@ body {
 }
 
 .card.featured {
-    border: 2px solid #c53030; /* Cornice rossa per la lezione in coppia */
+    border: 2px solid #c53030; /* Cornice rossa lezione in coppia */
 }
 
 .badge {
     position: absolute;
     top: -12px;
     right: 20px;
-    background: #c53030; /* Sfondo del badge "Consigliata" in rosso */
+    background: #c53030; /* Badge rosso Consigliata */
     color: white;
     padding: 4px 12px;
     font-size: 0.8rem;
