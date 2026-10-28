@@ -38,7 +38,7 @@ body {
     gap: 12px;
     font-size: 1.2rem;
     font-weight: bold;
-    color: #004080;
+    color: #004080; /* Scritta blu originaria per Arco Da Monte */
     text-decoration: none;
 }
 
@@ -64,13 +64,13 @@ body {
 }
 
 .nav-links a:hover {
-    color: #004080;
+    color: #0056b3; /* Blu leggermente più chiaro sulle interazioni */
 }
 
 /* HERO SECTION (BLU) */
 .hero-section {
     position: relative;
-    background: linear-gradient(135deg, #004080 0%, #00264d 100%);
+    background: linear-gradient(135deg, #0056b3 0%, #003366 100%); /* Blu più chiaro rispetto all'originale */
     color: white;
     padding: 100px 20px;
     text-align: center;
@@ -105,7 +105,7 @@ body {
 
 .btn-primary {
     display: inline-block;
-    background-color: #ff9900;
+    background-color: #c53030; /* Bottone rosso per la prenotazione */
     color: #fff;
     padding: 12px 25px;
     border-radius: 5px;
@@ -115,7 +115,7 @@ body {
 }
 
 .btn-primary:hover {
-    background-color: #e68a00;
+    background-color: #a62626; /* Rosso più scuro al passaggio del mouse */
 }
 
 /* PRESENTAZIONE LOCANDINA */
@@ -150,7 +150,7 @@ body {
 }
 
 .locandina-text h2 {
-    color: #004080;
+    color: #0056b3;
     margin-bottom: 15px;
     font-size: 2rem;
 }
@@ -163,7 +163,7 @@ body {
 
 .section-title {
     text-align: center;
-    color: #004080;
+    color: #0056b3;
     font-size: 2.2rem;
     margin-bottom: 40px;
 }
@@ -186,14 +186,14 @@ body {
 }
 
 .card.featured {
-    border: 2px solid #004080;
+    border: 2px solid #c53030; /* Cornice rossa per la lezione in coppia */
 }
 
 .badge {
     position: absolute;
     top: -12px;
     right: 20px;
-    background: #004080;
+    background: #c53030; /* Sfondo del badge "Consigliata" in rosso */
     color: white;
     padding: 4px 12px;
     font-size: 0.8rem;
@@ -202,7 +202,7 @@ body {
 }
 
 .card h3 {
-    color: #004080;
+    color: #0056b3;
     margin-bottom: 20px;
 }
 
@@ -225,7 +225,7 @@ body {
 .cost {
     font-size: 1.2rem;
     font-weight: bold;
-    color: #004080;
+    color: #0056b3;
 }
 
 .card-note {
@@ -244,7 +244,7 @@ body {
 }
 
 .teacher-section h2 {
-    color: #004080;
+    color: #0056b3;
     font-size: 2rem;
     margin-bottom: 20px;
 }
@@ -287,7 +287,7 @@ body {
 }
 
 .form-container h2, .map-container h2 {
-    color: #004080;
+    color: #0056b3;
     margin-bottom: 10px;
 }
 
@@ -318,7 +318,7 @@ body {
 
 .btn-submit {
     width: 100%;
-    background-color: #004080;
+    background-color: #0056b3;
     color: white;
     border: none;
     padding: 12px;
@@ -330,7 +330,7 @@ body {
 }
 
 .btn-submit:hover {
-    background-color: #00264d;
+    background-color: #003366;
 }
 
 .map-wrapper {
