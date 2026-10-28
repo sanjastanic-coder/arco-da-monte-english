@@ -1,0 +1,83 @@
+:root {
+    --navy: #0A192F;
+    --british-red: #C8102E;
+    --white: #FFFFFF;
+    --gray-bg: #F8FAFC;
+    --text-dark: #1E293B;
+    --text-muted: #64748B;
+}
+
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: sans-serif; color: var(--text-dark); background-color: var(--white); line-height: 1.6; }
+.container { max-width: 1100px; margin: 0 auto; padding: 80px 20px; }
+.text-center { text-align: center; }
+
+
+/* NAVBAR */
+.navbar { background: var(--navy); position: fixed; width: 100%; top: 0; z-index: 100; }
+.nav-container { display: flex; justify-content: space-between; align-items: center; padding: 20px; }
+.logo { color: var(--white); font-weight: bold; text-decoration: none; font-size: 1.2rem; }
+.nav-links { display: flex; list-style: none; gap: 20px; }
+.nav-links a { color: #E2E8F0; text-decoration: none; font-weight: 600; }
+.nav-links a:hover { color: var(--british-red); }
+
+
+/* HERO */
+.hero-section { 
+    background: linear-gradient(rgba(10,25,47,0.7), rgba(10,25,47,0.7)), url('https://unsplash.com') center/cover;
+    height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; color: var(--white);
+}
+.hero-content h1 { font-size: 3.5rem; text-transform: uppercase; margin-bottom: 20px; }
+.hero-subtitle { font-size: 1.2rem; margin-bottom: 30px; color: #94A3B8; }
+
+
+/* BOTTONI GIGANTI */
+.btn-primary { background: var(--british-red); color: var(--white); padding: 15px 30px; text-decoration: none; font-weight: bold; text-transform: uppercase; display: inline-block; }
+.btn-secondary { background: var(--navy); color: var(--white); padding: 12px; width: 100%; border: none; font-weight: bold; text-transform: uppercase; cursor: pointer; }
+
+
+/* LOCANDINA ASIMMETRICA */
+.visual-container { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+.locandina-wrapper img { width: 100%; max-height: 500px; object-fit: cover; box-shadow: 20px 20px 0 var(--gray-bg); }
+.locandina-text h2 { font-size: 2.5rem; color: var(--navy); margin-bottom: 20px; }
+
+
+/* SCHEDE PREZZI */
+.prices-section { background: var(--gray-bg); }
+.section-title { font-size: 2.5rem; text-transform: uppercase; color: var(--navy); text-align: center; margin-bottom: 40px; }
+.grid-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+.card { background: var(--white); padding: 30px; border: 1px solid #E2E8F0; position: relative; }
+.card.featured { border: 3px solid var(--british-red); }
+.badge { position: absolute; top: 15px; right: 15px; background: var(--british-red); color: var(--white); padding: 3px 8px; font-size: 0.7rem; font-weight: bold; }
+.card h3 { font-size: 1.5rem; margin-bottom: 20px; color: var(--navy); }
+.price-row { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid #F1F5F9; }
+.duration { font-weight: bold; color: var(--text-muted); }
+.cost { font-size: 1.6rem; font-weight: bold; color: var(--british-red); }
+
+
+/* INSEGNANTE */
+.teacher-section { background: var(--navy); color: var(--white); }
+.teacher-quote { font-size: 1.5rem; font-style: italic; max-width: 700px; margin: 20px auto 0 auto; }
+
+
+/* MODULI DI INVIO */
+.form-container { max-width: 500px; margin: 0 auto; }
+.form-group { margin-bottom: 15px; text-align: left; }
+.form-group label { display: block; font-weight: bold; margin-bottom: 5px; font-size: 0.85rem; }
+input, select { width: 100%; padding: 12px; background: var(--gray-bg); border: 1px solid #CBD5E1; }
+.result-box { background: #E2E8F0; padding: 20px; margin-top: 20px; text-align: center; font-weight: bold; }
+
+
+/* DOVE SIAMO */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.map-container { background: var(--gray-bg); height: 250px; display: flex; align-items: center; justify-content: center; border-left: 5px solid var(--british-red); }
+
+
+footer { background: var(--navy); color: #94A3B8; text-align: center; padding: 20px; }
+
+
+@media (max-width: 768px) {
+    .visual-container, .grid-2 { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+}
