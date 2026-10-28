@@ -338,3 +338,8 @@ body {
     border-radius: 6px;
     overflow: hidden;
 }
+
+.map-wrapper iframe {
+    display: block;
+    width: 100%;
+}
