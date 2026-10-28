@@ -224,58 +224,41 @@
 
                     <div class="form-group">
                         <label for="fasciaEta">Fascia d'età *</label>
-
                         <select name="Fascia d'età" id="fasciaEta" required>
-                            <option value="" disabled selected>
-                                Seleziona la fascia d'età
-                            </option>
-                            <option value="Scuola elementare">
-                                Scuola elementare
-                            </option>
-                            <option value="Scuola media">
-                                Scuola media
-                            </option>
-                            <option value="Scuola superiore">
-                                Scuola superiore
-                            </option>
-                            <option value="Università / Adulti">
-                                Università / Adulti
-                            </option>
+                            <option value="" disabled selected>Seleziona la fascia d'età</option>
+                            <option value="Scuola elementare">Scuola elementare</option>
+                            <option value="Scuola media">Scuola media</option>
+                            <option value="Scuola superiore">Scuola superiore</option>
+                            <option value="Università / Adulto">Università / Adulto</option>
                         </select>
                     </div>
 
                     <div class="form-group">
-                        <button type="submit" class="btn-submit">Invia richiesta</button>
+                        <label for="giornoPreferito">Giorno preferito *</label>
+                        <select name="Giorno preferito" id="giornoPreferito" required>
+                            <option value="" disabled selected>Seleziona il giorno</option>
+                            <option value="Lunedì">Lunedì</option>
+                            <option value="Martedì">Martedì</option>
+                            <option value="Mercoledì">Mercoledì</option>
+                            <option value="Giovedì">Giovedì</option>
+                            <option value="Venerdì">Venerdì</option>
+                            <option value="Sabato">Sabato</option>
+                        </select>
                     </div>
+
+                    <div class="form-group">
+                        <label for="fasciaOraria">Fascia oraria preferita *</label>
+                        <select name="Fascia oraria" id="fasciaOraria" required>
+                            <option value="" disabled selected>Seleziona l'orario</option>
+                            <option value="Mattina (9:00 - 13:00)">Mattina (9:00 - 13:00)</option>
+                            <option value="Pomeriggio (14:00 - 17:00)">Pomeriggio (14:00 - 17:00)</option>
+                            <option value="Tardo pomeriggio/Sera (17:00 - 20:00)">Tardo pomeriggio/Sera (17:00 - 20:00)</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Invia Messaggio</button>
+
                 </form>
             </div>
 
-            <!-- MAPPA E DETTAGLI POSIZIONE -->
-            <div class="map-container">
-                <h2>Dove Siamo</h2>
-                
-                <p class="address-text">
-                    <strong>Studio Arco Da Monte</strong><br>
-                    Via Gian Battista da Monte, 1d<br>
-                    37126 Verona (VR) — Borgo Trento
-                </p>
-
-                <div class="map-wrapper">
-                    <!-- Google Maps impostato tramite coordinate GPS esatte -->
-                    <iframe 
-                        src="https://google.com" 
-                        width="100%" 
-                        height="300" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-</body>
-</html>
+            <!-- DOVE SIAMO & MAPPA GOOGLE -->
