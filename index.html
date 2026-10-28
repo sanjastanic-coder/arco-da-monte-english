@@ -164,8 +164,75 @@
     </section>
 
     <!-- CONTATTI, MAPPA E RICHIESTA INFORMAZIONI -->
-    <section id="contatti" class="contact-section">
-        <div class="container contact-grid">
+<section id="contatti" class="contact-section">
+    <div class="container contact-grid">
+        
+        <!-- MODULO ATTIVO CON WEB3FORMS -->
+        <div class="form-container">
+            <h2>Richiedi Informazioni</h2>
+            <p class="form-subtitle">Compila i campi per richiedere la disponibilità oraria.</p>
+
+            <form id="infoForm" action="https://web3forms.com" method="POST">
+                <!-- La tua chiave Web3Forms attiva -->
+                <input type="hidden" name="access_key" value="5abce6bd-347d-417c-be07-fcf5e073c491">
+                
+                <!-- Ritorno automatico alla tua pagina Vercel dopo l'invio -->
+                <input type="hidden" name="redirect" value="https://vercel.app">
+
+                <div class="form-group">
+                    <label for="nome">Nome dello studente *</label>
+                    <input type="text" name="Nome Studente" id="nome" placeholder="Il tuo nome" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email di contatto *</label>
+                    <input type="email" name="Email di Contatto" id="email" placeholder="La tua email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Telefono</label>
+                    <input type="tel" name="Telefono" id="telefono" placeholder="Il tuo numero di telefono">
+                </div>
+
+                <div class="form-group">
+                    <label for="fasciaEta">Fascia d'età *</label>
+                    <select name="Fascia Eta" id="fasciaEta" required>
+                        <option value="" disabled selected>Seleziona la fascia d'età</option>
+                        <option value="elementari">Scuola Elementare</option>
+                        <option value="medie">Scuola Media</option>
+                        <option value="superiori">Scuola Superiore</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-submit">Invia Messaggio</button>
+            </form>
+        </div>
+
+        <!-- SEZIONE MAPPA CON LE COORDINATE ESATTE -->
+        <div class="map-container">
+            <h2>Dove Siamo</h2>
+            <p class="address-text">
+                <strong>Studio Arco Da Monte</strong><br>
+                Via Gian Battista da Monte, 1d<br>
+                37126 Verona (VR) — Borgo Trento
+            </p>
+            <div class="map-wrapper">
+                <!-- Mappa di Google sbloccata grazie alle coordinate reali dello studio -->
+                <iframe 
+                    src="https://google.com" 
+                    width="100%" 
+                    height="300" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+
+    </div>
+</section>
+
             
             <!-- MODULO ATTIVO CON WEB3FORMS -->
             <div class="form-container">
