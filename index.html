@@ -6,7 +6,7 @@
 
     <title>Studio Arco Da Monte — Ripetizioni di Inglese Verona</title>
 
-    <meta name="description" content="Ripetizioni di inglese a Verona, in Borgo Trento. Lezioni individuali, in coppia e in piccoli gruppi. Scopri le formule e prenota la tua lezione.">
+    <meta name="description" content="Ripetizioni di inglese a Verona, in Borgo Trento. Lezioni individuali, in coppia e in piccoli gruppi. Richiedi informazioni e prenota la tua lezione.">
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -21,8 +21,7 @@
             <ul class="nav-links">
                 <li><a href="#prezzi">Lezioni & Prezzi</a></li>
                 <li><a href="#insegnante">L'Insegnante</a></li>
-                <li><a href="#test-sezione">Trova Formula</a></li>
-                <li><a href="#contatti">Dove Siamo</a></li>
+                <li><a href="#contatti">Contatti & Mappa</a></li>
             </ul>
         </div>
     </nav>
@@ -38,8 +37,8 @@
                 Percorsi dinamici ed essenziali nel cuore di Borgo Trento a Verona.
             </p>
 
-            <a href="#test-sezione" class="btn-primary">
-                Fai il test e trova la lezione giusta per te
+            <a href="#contatti" class="btn-primary">
+                Contattaci e prenota la tua lezione
             </a>
         </div>
     </header>
@@ -164,97 +163,76 @@
         </div>
     </section>
 
-    <!-- TEST E RICHIESTA INFORMAZIONI -->
-    <section id="test-sezione" class="test-section">
-        <div class="form-container">
+    <!-- CONTATTI, MAPPA E RICHIESTA INFORMAZIONI -->
+    <section id="contatti" class="contact-section">
+        <div class="container contact-grid">
+            
+            <!-- MODULO -->
+            <div class="form-container">
+                <h2>Richiedi Informazioni</h2>
+                <p class="form-subtitle">Compila i campi per richiedere la disponibilità oraria.</p>
 
-            <h2>Trova la tua formula ottimale</h2>
+                <form id="infoForm" action="https://formsubmit.co" method="POST">
+                    <input type="hidden" name="_subject" value="Nuova Richiesta Informazioni - Studio Arco Da Monte">
+                    <input type="hidden" name="_captcha" value="true">
 
-            <p class="form-subtitle">
-                Compila i campi per scoprire la proposta ideale
-                in base ai tuoi ritmi.
-            </p>
+                    <div class="form-group">
+                        <label for="nome">Nome dello studente *</label>
+                        <input type="text" name="Nome Studente" id="nome" placeholder="Il tuo nome" required>
+                    </div>
 
-            <form
-                id="quizForm"
-                action="https://formsubmit.co/inglese@arcodamonte.com"
-                method="POST"
-            >
+                    <div class="form-group">
+                        <label for="email">Email di contatto *</label>
+                        <input type="email" name="Email di Contatto" id="email" placeholder="La tua email" required>
+                    </div>
 
-                <input
-                    type="hidden"
-                    name="_subject"
-                    value="Nuovo Test di Livello - Studio Arco Da Monte"
-                >
+                    <div class="form-group">
+                        <label for="telefono">Telefono</label>
+                        <input type="tel" name="Telefono" id="telefono" placeholder="Il tuo numero di telefono">
+                    </div>
 
-                <input type="hidden" name="_captcha" value="true">
+                    <div class="form-group">
+                        <label for="fasciaEta">Fascia d'età *</label>
+                        <select name="Fascia Eta" id="fasciaEta" required>
+                            <option value="" disabled selected>Seleziona la fascia d'età</option>
+                            <option value="elementari">Scuola Elementare</option>
+                            <option value="medie">Scuola Media</option>
+                            <option value="superiori">Scuola Superiore</option>
+                        </select>
+                    </div>
 
-                <div class="form-group">
-                    <label for="nome">Nome dello studente *</label>
-                    <input
-                        type="text"
-                        name="Nome Studente"
-                        id="nome"
-                        placeholder="Il tuo nome"
-                        required
-                    >
+                    <button type="submit" class="btn-submit">Invia Messaggio</button>
+                </form>
+            </div>
+
+            <!-- MAPPA E DETTAGLI -->
+            <div class="map-container">
+                <h2>Dove Siamo</h2>
+                <p class="address-text">
+                    <strong>Studio Arco Da Monte</strong><br>
+                    Via Gian Battista da Monte, 1d<br>
+                    37126 Verona (VR) — Borgo Trento
+                </p>
+                <div class="map-wrapper">
+                    <!-- Google Maps Embed verificato per Via Gian Battista da Monte 1d -->
+                    <iframe 
+                        src="https://google.com" 
+                        width="100%" 
+                        height="300" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
+            </div>
 
-                <div class="form-group">
-                    <label for="email">Email di contatto *</label>
-                    <input
-                        type="email"
-                        name="Email di Contatto"
-                        id="email"
-                        placeholder="La tua email"
-                        required
-                    >
-                </div>
-
-                <div class="form-group">
-                    <label for="telefono">Telefono</label>
-                    <input
-                        type="tel"
-                        name="Telefono"
-                        id="telefono"
-                        placeholder="Il tuo numero di telefono"
-                    >
-                </div>
-
-                <div class="form-group">
-                    <label for="fasciaEta">Fascia d'età *</label>
-                    <select name="Fascia Eta" id="fasciaEta" required>
-                        <option value="" disabled selected>
-                            Seleziona la fascia d'età
-                        </option>
-                        <option value="elementari">Scuola Elementare</option>
-                        <option value="medie">Scuola Media</option>
-                        <option value="superiori">Scuola Superiore</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="livello">Livello d'inglese dichiarato *</label>
-                    <select name="Livello Dichiarato" id="livello" required>
-                        <option value="" disabled selected>
-                            Seleziona il livello attuale
-                        </option>
-                        <option value="principiante">Principiante </option>
-                        <option value="intermedio">Intermedio </option>
-                        <option value="avanzato">Avanzato </option>
-                    </select>
-                </div>
-
-                <button type="submit" class="btn-submit">Invia la richiesta</button>
-            </form>
         </div>
     </section>
 
-    <!-- DOVE SIAMO -->
-    <footer id="contatti" class="footer-section">
+    <!-- FOOTER -->
+    <footer class="footer-section">
         <div class="container text-center">
-            <h2>Dove Siamo</h2>
-            <p>Studio Arco Da Monte — Borgo Trento, Verona</p>
             <p class="copyright">&copy; 2026 Studio Arco Da Monte. Tutti i diritti riservati.</p>
         </div>
     </footer>
