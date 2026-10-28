@@ -1,244 +1,340 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+/* STILI GENERALI */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    background-color: #f4f4f4;
+}
 
-    <title>Studio Arco Da Monte — Ripetizioni di Inglese Verona</title>
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
-    <meta name="description" content="Ripetizioni di inglese a Verona, in Borgo Trento. Lezioni individuali, in coppia e in piccoli gruppi. Richiedi informazioni e prenota la tua lezione.">
+/* NAVBAR */
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-    <link rel="stylesheet" href="style.css">
-</head>
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 15px 20px;
+}
 
-<body>
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #004080;
+    text-decoration: none;
+}
 
-    <!-- NAVIGAZIONE -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#" class="logo">Studio Arco Da Monte</a>
+.logo-img {
+    height: 38px;
+    width: auto;
+    object-fit: contain;
+}
 
-            <ul class="nav-links">
-                <li><a href="#prezzi">Lezioni & Prezzi</a></li>
-                <li><a href="#insegnante">L'Insegnante</a></li>
-                <li><a href="#contatti">Contatti & Mappa</a></li>
-            </ul>
-        </div>
-    </nav>
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
 
-    <!-- HERO -->
-    <header class="hero-section">
-        <div class="hero-overlay"></div>
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+    transition: color 0.3s;
+}
 
-        <div class="hero-content">
-            <h1>Ripetizioni di inglese</h1>
+.nav-links a:hover {
+    color: #0056b3;
+}
 
-            <p class="hero-subtitle">
-                Percorsi dinamici ed essenziali nel cuore di Borgo Trento a Verona.
-            </p>
+/* HERO SECTION (BLU CHIARO) */
+.hero-section {
+    position: relative;
+    background: linear-gradient(135deg, #0056b3 0%, #003366 100%);
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
 
-            <a href="#contatti" class="btn-primary">
-                Contattaci e prenota la tua lezione
-            </a>
-        </div>
-    </header>
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+}
 
-    <!-- PRESENTAZIONE DELLO STUDIO -->
-    <section class="locandina-section">
-        <div class="container visual-container">
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+}
 
-            <div class="locandina-wrapper">
-                <img
-                    src="locandina.png"
-                    alt="Locandina Studio Arco Da Monte"
-                    loading="lazy"
-                >
-            </div>
+.hero-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
 
-            <div class="locandina-text">
-                <h2>Il tuo obiettivo, la nostra guida</h2>
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
 
-                <p>
-                    Informazioni trasparenti, flessibilità totale e didattica
-                    mirata per studenti di ogni livello. Un percorso pensato
-                    per aiutarti a migliorare il tuo inglese con lezioni
-                    personalizzate e formule flessibili.
-                </p>
-            </div>
+.btn-primary {
+    display: inline-block;
+    background-color: #c53030;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
 
-        </div>
-    </section>
+.btn-primary:hover {
+    background-color: #a62626;
+}
 
-    <!-- LEZIONI E PREZZI -->
-    <section id="prezzi" class="prices-section">
-        <div class="container">
+/* PRESENTAZIONE LOCANDINA */
+.locandina-section {
+    padding: 60px 0;
+    background-color: #fff;
+}
 
-            <h2 class="section-title">Le nostre formule</h2>
+.visual-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
 
-            <div class="grid-cards">
+.locandina-wrapper {
+    flex: 1;
+    min-width: 280px;
+    text-align: center;
+}
 
-                <!-- LEZIONE INDIVIDUALE -->
-                <div class="card">
-                    <h3>Lezione Individuale</h3>
+.locandina-wrapper img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
 
-                    <div class="price-block">
-                        <div class="price-row">
-                            <span class="duration">45 MINUTI</span>
-                            <span class="cost">€15</span>
-                        </div>
+.locandina-text {
+    flex: 1;
+    min-width: 280px;
+}
 
-                        <div class="price-row">
-                            <span class="duration">60 MINUTI</span>
-                            <span class="cost">€25</span>
-                        </div>
+.locandina-text h2 {
+    color: #0056b3;
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
 
-                        <div class="price-row">
-                            <span class="duration">90 MINUTI</span>
-                            <span class="cost">€35</span>
-                        </div>
-                    </div>
+/* PREZZI & FORMULE */
+.prices-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
 
-                    <p class="card-note">
-                        Formula con comodo pagamento mensile.
-                    </p>
-                </div>
+.section-title {
+    text-align: center;
+    color: #0056b3;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+}
 
-                <!-- LEZIONE IN COPPIA -->
-                <div class="card featured">
-                    <div class="badge">Consigliata</div>
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
 
-                    <h3>Lezione in Coppia</h3>
+.card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
-                    <div class="price-block">
-                        <div class="price-row">
-                            <span class="duration">60 MINUTI</span>
-                            <span class="cost">
-                                €20 <small>a persona</small>
-                            </span>
-                        </div>
-                    </div>
+.card.featured {
+    border: 2px solid #c53030;
+}
 
-                    <p class="card-note">
-                        Formula con comodo pagamento mensile.
-                    </p>
-                </div>
+.badge {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: #c53030;
+    color: white;
+    padding: 4px 12px;
+    font-size: 0.8rem;
+    border-radius: 20px;
+    font-weight: bold;
+}
 
-                <!-- PICCOLO GRUPPO -->
-                <div class="card">
-                    <h3>Piccolo Gruppo</h3>
+.card h3 {
+    color: #0056b3;
+    margin-bottom: 20px;
+}
 
-                    <div class="price-block">
-                        <div class="price-row">
-                            <span class="duration">60 MINUTI</span>
-                            <span class="cost">
-                                €15 <small>a persona</small>
-                            </span>
-                        </div>
-                    </div>
+.price-block {
+    margin-bottom: 20px;
+}
 
-                    <p class="card-note">
-                        Massimo 3 partecipanti. Formula con comodo
-                        pagamento mensile.
-                    </p>
-                </div>
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
 
-            </div>
-        </div>
-    </section>
+.duration {
+    font-weight: bold;
+    color: #666;
+}
 
-    <!-- PRESENTAZIONE INSEGNANTE -->
-    <section id="insegnante" class="teacher-section">
-        <div class="container text-center">
+.cost {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #0056b3;
+}
 
-            <h2>Conosci il tuo insegnante</h2>
+.card-note {
+    font-size: 0.85rem;
+    color: #666;
+}
 
-            <div class="quote-container">
-                <blockquote class="teacher-quote">
-                    “Sono uno studente universitario e ho conseguito
-                    la maturità all’estero presso un liceo classico
-                    con un percorso di studi interamente in lingua inglese.”
-                </blockquote>
-            </div>
+/* INSEGNANTE */
+.teacher-section {
+    padding: 60px 0;
+    background-color: #fff;
+}
 
-        </div>
-    </section>
+.text-center {
+    text-align: center;
+}
 
-    <!-- CONTATTI, MAPPA E RICHIESTA INFORMAZIONI -->
-    <section id="contatti" class="contact-section">
-        <div class="container contact-grid">
-            
-            <!-- MODULO ATTIVO CON WEB3FORMS -->
-            <div class="form-container">
-                <h2>Richiedi Informazioni</h2>
-                <p class="form-subtitle">Compila i campi per richiedere la disponibilità oraria.</p>
+.teacher-section h2 {
+    color: #0056b3;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
 
-                <form id="infoForm" action="https://web3forms.com" method="POST">
-                    <!-- Chiave Web3Forms inserita ed attiva -->
-                    <input type="hidden" name="access_key" value="5abce6bd-347d-417c-be07-fcf5e073c491">
-                    
-                    <!-- Ritorno alla tua pagina Vercel dopo l'invio -->
-                    <input type="hidden" name="redirect" value="https://vercel.app">
+.quote-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
 
-                    <div class="form-group">
-                        <label for="nome">Nome dello studente *</label>
-                        <input type="text" name="Nome Studente" id="nome" placeholder="Il tuo nome" required>
-                    </div>
+.teacher-quote {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #555;
+    line-height: 1.6;
+}
 
-                    <div class="form-group">
-                        <label for="email">Email di contatto *</label>
-                        <input type="email" name="Email di Contatto" id="email" placeholder="La tua email" required>
-                    </div>
+/* CONTATTI E MAPPA */
+.contact-section {
+    padding: 60px 0;
+    background-color: #f4f4f4;
+}
 
-                    <div class="form-group">
-                        <label for="telefono">Telefono</label>
-                        <input type="tel" name="Telefono" id="telefono" placeholder="Il tuo numero di telefono">
-                    </div>
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
 
-                    <div class="form-group">
-                        <label for="fasciaEta">Fascia d'età *</label>
-                        <select name="Fascia Eta" id="fasciaEta" required>
-                            <option value="" disabled selected>Seleziona la fascia d'età</option>
-                            <option value="elementari">Scuola Elementare</option>
-                            <option value="medie">Scuola Media</option>
-                            <option value="superiori">Scuola Superiore</option>
-                        </select>
-                    </div>
+@media(max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
 
-                    <button type="submit" class="btn-submit">Invia Messaggio</button>
-                </form>
-            </div>
+.form-container, .map-container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
 
-            <!-- MAPPA GENERATA DIRETTAMENTE DAL TUO LINK DI COOPERAZIONE MAPS -->
-            <div class="map-container">
-                <h2>Dove Siamo</h2>
-                <p class="address-text">
-                    <strong>Studio Arco Da Monte</strong><br>
-                    Via Gian Battista da Monte, 1d<br>
-                    37126 Verona (VR) — Borgo Trento
-                </p>
-                <div class="map-wrapper">
-                    <!-- Mappa pulita con coordinate native collegate direttamente alla scheda reale del tuo studio -->
-                    <iframe 
-                        src="https://google.com" 
-                        width="100%" 
-                        height="300" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
-            </div>
+.form-container h2, .map-container h2 {
+    color: #0056b3;
+    margin-bottom: 10px;
+}
 
-        </div>
-    </section>
+.form-subtitle, .address-text {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
 
-    <!-- FOOTER -->
-    <footer class="footer-section" style="background-color: #0056b3; color: white; padding: 2rem; text-align: center;">
-        <div class="container">
-            <p class="copyright" style="font-size: 0.85rem; opacity: 0.9;">&copy; 2026 Studio Arco Da Monte. Tutti i diritti riservati.</p>
-        </div>
-    </footer>
+.form-group {
+    margin-bottom: 15px;
+}
 
-</body>
-</html>
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #003366;
+}
+
+.map-wrapper {
+    margin-top: 15px;
+    border-radius: 6px;
+    overflow: hidden;
+}
