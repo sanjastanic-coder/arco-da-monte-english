@@ -167,14 +167,17 @@
     <section id="contatti" class="contact-section">
         <div class="container contact-grid">
             
-            <!-- MODULO -->
+            <!-- MODULO CONFIGURATO CON LA TUA ACCESS KEY -->
             <div class="form-container">
                 <h2>Richiedi Informazioni</h2>
                 <p class="form-subtitle">Compila i campi per richiedere la disponibilità oraria.</p>
 
-                <form id="infoForm" action="https://formsubmit.co/inglese@arcodamonte.com" method="POST">
-                    <input type="hidden" name="_subject" value="Nuova Richiesta Informazioni - Studio Arco Da Monte">
-                    <input type="hidden" name="_captcha" value="true">
+                <form id="infoForm" action="https://web3forms.com" method="POST">
+                    <!-- La tua chiave Web3Forms inserita ed attiva -->
+                    <input type="hidden" name="access_key" value="5abce6bd-347d-417c-be07-fcf5e073c491">
+                    
+                    <!-- Reindirizzamento automatico alla pagina Vercel dopo l'invio del messaggio -->
+                    <input type="hidden" name="redirect" value="https://vercel.app">
 
                     <div class="form-group">
                         <label for="nome">Nome dello studente *</label>
@@ -205,7 +208,7 @@
                 </form>
             </div>
 
-            <!-- MAPPA E DETTAGLI -->
+            <!-- MAPPA UFFICIALE GOOGLE MAPS -->
             <div class="map-container">
                 <h2>Dove Siamo</h2>
                 <p class="address-text">
@@ -214,9 +217,9 @@
                     37126 Verona (VR) — Borgo Trento
                 </p>
                 <div class="map-wrapper">
-                    <!-- Google Maps impostato tramite coordinate GPS esatte -->
+                    <!-- Iframe ufficiale Google Maps collegato alla scheda dello Studio -->
                     <iframe 
-                        src="https://maps.google.com/maps?q=45.45131457272681,10.988068404604652&z=17&output=embed" 
+                        src="https://google.com" 
                         width="100%" 
                         height="300" 
                         style="border:0;" 
@@ -229,6 +232,13 @@
 
         </div>
     </section>
+
+    <!-- FOOTER -->
+    <footer class="footer-section" style="background-color: #0056b3; color: white; padding: 2rem; text-align: center;">
+        <div class="container">
+            <p class="copyright" style="font-size: 0.85rem; opacity: 0.9;">&copy; 2026 Studio Arco Da Monte. Tutti i diritti riservati.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
