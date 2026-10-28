@@ -35,7 +35,6 @@
     <section class="locandina-section">
         <div class="container visual-container">
             <div class="locandina-wrapper">
-                <!-- Codice pulito, essenziale e senza blocchi di errore -->
                 <img src="locandina.png" alt="Locandina Studio Arco Da Monte">
             </div>
             <div class="locandina-text">
@@ -45,7 +44,7 @@
         </div>
     </section>
 
-        <!-- LEZIONI E PREZZI (GRANDI E CHIARI) -->
+    <!-- LEZIONI E PREZZI (GRANDI E CHIARI) -->
     <section id="prezzi" class="prices-section">
         <div class="container">
             <h2 class="section-title">Le nostre Formule</h2>
@@ -62,7 +61,7 @@
                     <p class="card-note">Pagamento mensile. Ogni 10 lezioni, 1 è in omaggio!</p>
                 </div>
 
-                <!-- IN COPPIA (AGGIORNATA A 20€) -->
+                <!-- IN COPPIA -->
                 <div class="card featured">
                     <div class="badge">Consigliata</div>
                     <h3>Lezione in Coppia</h3>
@@ -91,7 +90,6 @@
         </div>
     </section>
 
-
     <!-- PRESENTAZIONE INSEGNANTE -->
     <section id="insegnante" class="teacher-section">
         <div class="container text-center">
@@ -104,27 +102,31 @@
         </div>
     </section>
 
-    <!-- TEST INTERATTIVO -->
+    <!-- TEST INTERATTIVO (Invia email reale a inglese@arcodamonte.com) -->
     <section id="test-sezione" class="test-section">
         <div class="form-container">
             <h2>Trova la tua formula ottimale</h2>
             <p class="form-subtitle">Compila i campi per scoprire la proposta ideale in base ai tuoi ritmi.</p>
-            <form id="quizForm">
-                <div class="form-group"><input type="text" id="nome" placeholder="Il tuo Nome *" required></div>
-                <div class="form-group"><input type="email" id="email" placeholder="La tua Email *" required></div>
-                <div class="form-group"><input type="tel" id="telefono" placeholder="Telefono (Facoltativo)"></div>
+            <form id="quizForm" action="https://formsubmit.co" method="POST">
+                <input type="hidden" name="_next" value="https://github.io">
+                <input type="hidden" name="_subject" value="Nuovo Test di Livello - Studio Arco Da Monte">
+                
+                <div class="form-group"><input type="text" name="Nome Studente" id="nome" placeholder="Il tuo Nome *" required></div>
+                <div class="form-group"><input type="email" name="Email di Contatto" id="email" placeholder="La tua Email *" required></div>
+                <div class="form-group"><input type="tel" name="Telefono" id="telefono" placeholder="Telefono (Facoltativo)"></div>
                 
                 <div class="form-group">
                     <label>Fascia d'età:</label>
-                    <select id="fasciaEta" required>
+                    <select name="Fascia Eta" id="fasciaEta" required>
+                        <!-- Inserita l'opzione per le elementari richiesta -->
+                        <option value="elementari">Scuola Elementare</option>
                         <option value="medie">Scuola Media</option>
                         <option value="superiori">Scuola Superiore</option>
-                        <option value="universita">Università / Adulti</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label>Livello d'inglese dichiarato:</label>
-                    <select id="livello" required>
+                    <select name="Livello Dichiarato" id="livello" required>
                         <option value="A1-A2">Principiante (A1/A2)</option>
                         <option value="B1-B2">Intermedio (B1/B2)</option>
                         <option value="C1-C2">Avanzato (C1/C2)</option>
@@ -132,33 +134,36 @@
                 </div>
                 <div class="form-group">
                     <label>Formula preferita:</label>
-                    <select id="formula" required>
+                    <select name="Formula Preferita" id="formula" required>
                         <option value="Individuale">Lezione Individuale</option>
                         <option value="in Coppia">Lezione in Coppia</option>
                         <option value="in Piccolo Gruppo">Piccolo Gruppo</option>
                     </select>
                 </div>
-                <div class="form-group"><input type="text" id="dispo" placeholder="Giorni e fasce orarie disponibili *" required></div>
-                <div class="form-group"><input type="text" id="durataPref" placeholder="Durata preferita (es. 45, 60 o 90 min)"></div>
-                <div class="form-group"><input type="text" id="conosciuto" placeholder="Hai un amico con cui fare coppia? Scrivi il suo nome"></div>
+                <div class="form-group"><input type="text" name="Disponibilità Oraria" id="dispo" placeholder="Giorni e fasce orarie disponibili *" required></div>
+                <div class="form-group"><input type="text" name="Durata Preferita" id="durataPref" placeholder="Durata preferita (es. 45, 60 o 90 min)"></div>
+                <div class="form-group"><input type="text" name="Compagno di Coppia" id="conosciuto" placeholder="Hai un amico con cui fare coppia? Scrivi il suo nome"></div>
                 <button type="submit" class="btn-secondary">Invia il Test</button>
             </form>
             <div id="testResult" class="result-box" style="display: none;"></div>
         </div>
     </section>
 
-    <!-- CALENDARIO PRENOTAZIONI -->
+    <!-- CALENDARIO PRENOTAZIONI (Invia email reale a inglese@arcodamonte.com) -->
     <section id="prenota" class="booking-section">
         <div class="form-container">
             <h2>Prenota una sessione</h2>
             <p class="form-subtitle">Scegli il tuo giorno ideale per bloccare la lezione.</p>
-            <form id="bookingForm">
-                <div class="form-group"><input type="text" id="b-nome" placeholder="Tuo Nome *" required></div>
-                <div class="form-group"><input type="email" id="b-email" placeholder="Tua Email *" required></div>
-                <div class="form-group"><label>Seleziona il Giorno:</label><input type="date" id="b-data" required></div>
+            <form id="bookingForm" action="https://formsubmit.co" method="POST">
+                <input type="hidden" name="_next" value="https://github.io">
+                <input type="hidden" name="_subject" value="Nuova Richiesta di Prenotazione - Studio Arco Da Monte">
+
+                <div class="form-group"><input type="text" name="Nome Cliente" id="b-nome" placeholder="Tuo Nome *" required></div>
+                <div class="form-group"><input type="email" name="Email Cliente" id="b-email" placeholder="Tua Email *" required></div>
+                <div class="form-group"><label>Seleziona il Giorno:</label><input type="date" name="Data Lezione" id="b-data" required></div>
                 <div class="form-group">
                     <label>Seleziona l'Orario:</label>
-                    <select id="b-orario" required>
+                    <select name="Orario Lezione" id="b-orario" required>
                         <option value="15:00">15:00</option>
                         <option value="16:00">16:00</option>
                         <option value="17:00">17:00</option>
@@ -171,21 +176,17 @@
         </div>
     </section>
 
-        <!-- CONTATTI -->
+    <!-- CONTATTI -->
     <section id="contatti" class="contacts-section">
         <div class="container grid-2">
             <div class="contacts-info">
                 <h2>Sede dello Studio</h2>
                 <h3>Studio Arco Da Monte</h3>
-                <p>Via Gianbattista Da Monte 1D<br>37126 Verona — Borgo Trento</p>
+                <p>Via Gianbattista Da Monte 1D<br>Verona — Borgo Trento</p>
                 <p><strong>Telefono:</strong> +39 371 498 4363</p>
             </div>
-            <!-- Ecco la mappa attiva reale integrata -->
             <div class="map-container">
-                <iframe class="map-iframe" src="https://google.com" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
-    </section>
+
 
 
     <!-- FOOTER -->
