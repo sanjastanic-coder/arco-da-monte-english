@@ -1,81 +1,94 @@
-/* RESET GENERALE */
+/* RESET E CONFIGURAZIONE DI BASE */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #333;
-    background-color: #fcfcfc;
-}
-
 body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #333333;
+    background-color: #f9f9f9;
     line-height: 1.6;
 }
 
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 4rem 2rem;
-}
-
-.text-center {
-    text-align: center;
-}
-
-/* NAVBAR */
+/* NAVBAR E LOGO */
 .navbar {
-    position: fixed;
-    top: 0;
     width: 100%;
     background-color: #ffffff;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
     z-index: 1000;
 }
 
 .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 12px 24px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 1rem 2rem;
 }
 
 .logo {
-    font-weight: 700;
-    color: #1a365d;
+    display: flex;
+    align-items: center;
+    gap: 12px;
     text-decoration: none;
-    font-size: 1.25rem;
+    color: #222222;
+    font-weight: 700;
+    font-size: 1.15rem;
+}
+
+.logo-img {
+    height: 40px; /* Regola questa altezza se vuoi il logo più piccolo o più grande */
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.logo-text {
+    white-space: nowrap;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 1.5rem;
+    gap: 24px;
+    align-items: center;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #4a5568;
+    color: #444444;
     font-weight: 500;
-    transition: color 0.2s;
+    transition: color 0.2s ease;
 }
 
 .nav-links a:hover {
-    color: #c53030;
+    color: #0056b3;
 }
 
 /* HERO SECTION */
 .hero-section {
     position: relative;
-    padding: 10rem 2rem 6rem 2rem;
-    background: linear-gradient(135deg, #1a365d 0%, #2a4365 100%);
-    color: white;
+    background-image: url('hero-bg.jpg'); /* Se usi un'immagine di sfondo, altrimenti gestita via CSS/overlay */
+    background-size: cover;
+    background-position: center;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 100px 20px;
     text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .hero-content {
@@ -86,139 +99,164 @@ body {
 }
 
 .hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 1.5rem;
-    font-weight: 800;
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    font-weight: 700;
 }
 
 .hero-subtitle {
-    font-size: 1.25rem;
-    margin-bottom: 2.5rem;
-    opacity: 0.9;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9cept;
 }
 
 .btn-primary {
     display: inline-block;
-    background-color: #c53030;
-    color: white;
-    padding: 0.8rem 2rem;
-    border-radius: 5px;
+    background-color: #0056b3;
+    color: #ffffff;
+    padding: 12px 28px;
+    border-radius: 4px;
     text-decoration: none;
     font-weight: 600;
     transition: background-color 0.2s;
 }
 
 .btn-primary:hover {
-    background-color: #9b2c2c;
+    background-color: #004085;
 }
 
-/* PRESENTAZIONE STUDIO */
-.visual-container {
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-}
-
-.locandina-wrapper {
-    flex: 1;
-}
-
-.locandina-wrapper img {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-}
-
-.locandina-text {
-    flex: 1;
-}
-
-.locandina-text h2 {
-    font-size: 2rem;
-    color: #1a365d;
-    margin-bottom: 1rem;
-}
-
-/* LEZIONI E PREZZI */
-.prices-section {
-    background-color: #f7fafc;
+/* SEZIONI GENERALI */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
 }
 
 .section-title {
     text-align: center;
     font-size: 2rem;
-    color: #1a365d;
-    margin-bottom: 3rem;
+    margin-bottom: 40px;
+    color: #222222;
+}
+
+/* PRESENTAZIONE E LOCANDINA */
+.locandina-section {
+    background-color: #ffffff;
+}
+
+.visual-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+}
+
+.locandina-wrapper {
+    flex: 1;
+    min-width: 280px;
+    text-align: center;
+}
+
+.locandina-wrapper img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.locandina-text {
+    flex: 1;
+    min-width: 280px;
+}
+
+.locandina-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #222222;
+}
+
+/* PREZZI E CARD */
+.prices-section {
+    background-color: #f1f3f5;
 }
 
 .grid-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
+    gap: 30px;
 }
 
 .card {
-    background: white;
-    padding: 2.5rem 2rem;
+    background: #ffffff;
+    padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
-    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     position: relative;
     display: flex;
     flex-direction: column;
-}
-
-.card h3 {
-    font-size: 1.5rem;
-    color: #2d3748;
-    margin-bottom: 1.5rem;
+    justify-content: space-between;
 }
 
 .card.featured {
-    border: 2px solid #c53030;
-    transform: scale(1.03);
+    border: 2px solid #0056b3;
 }
 
 .badge {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background-color: #c53030;
+    top: -12px;
+    right: 20px;
+    background: #0056b3;
     color: white;
-    font-size: 0.75rem;
-    padding: 0.25rem 0.75rem;
+    padding: 4px 12px;
+    font-size: 0.8rem;
     border-radius: 20px;
-    font-weight: bold;
+    font-weight: 600;
+}
+
+.card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: #222222;
 }
 
 .price-block {
-    margin-bottom: 1.5rem;
+    margin-bottom: 20px;
 }
 
 .price-row {
     display: flex;
     justify-content: space-between;
-    padding: 0.5rem 0;
-    border-bottom: 1px dashed #e2e8f0;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.price-row:last-child {
+    border-bottom: none;
 }
 
 .duration {
+    font-size: 0.9rem;
+    color: #666;
     font-weight: 600;
-    font-size: 0.85rem;
-    color: #718096;
 }
 
 .cost {
+    font-size: 1.2rem;
     font-weight: 700;
-    color: #1a365d;
+    color: #0056b3;
+}
+
+.cost small {
+    font-size: 0.8rem;
+    font-weight: normal;
+    color: #666;
 }
 
 .card-note {
     font-size: 0.85rem;
-    color: #718096;
-    margin-top: auto;
+    color: #777;
+    margin-top: 15px;
 }
 
 /* INSEGNANTE */
@@ -226,141 +264,72 @@ body {
     background-color: #ffffff;
 }
 
-.teacher-section h2 {
-    font-size: 2rem;
-    color: #1a365d;
-    margin-bottom: 2rem;
+.text-center {
+    text-align: center;
 }
 
 .quote-container {
     max-width: 700px;
-    margin: 0 auto;
+    margin: 30px auto 0 auto;
 }
 
 .teacher-quote {
+    font-size: 1.2rem;
     font-style: italic;
-    font-size: 1.35rem;
-    color: #4a5568;
+    color: #444;
     line-height: 1.8;
 }
 
-/* SEZIONE CONTATTI E MAPPA */
+/* CONTATTI E MAPPA */
 .contact-section {
-    background-color: #f7fafc;
+    background-color: #f8f9fa;
 }
 
 .contact-grid {
-    display: flex;
-    gap: 3rem;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .form-container, .map-container {
-    flex: 1;
-    background: white;
-    padding: 2.5rem;
+    background: #ffffff;
+    padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
-    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
 .form-container h2, .map-container h2 {
-    color: #1a365d;
-    margin-bottom: 0.5rem;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
 
 .form-subtitle, .address-text {
-    color: #555;
-    margin-bottom: 1.5rem;
+    color: #666;
+    margin-bottom: 20px;
     font-size: 0.95rem;
 }
 
 .form-group {
-    margin-bottom: 1.25rem;
+    margin-bottom: 15px;
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 0.4rem;
-    font-weight: 600;
-    color: #4a5568;
-    font-size: 0.85rem;
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-size: 0.9rem;
 }
 
-.form-group input,
-.form-group select {
+.form-group input, .form-group select {
     width: 100%;
-    padding: 0.7rem;
-    border: 1px solid #cbd5e0;
-    border-radius: 4px;
-    font-size: 0.95rem;
-    color: #2d3748;
-}
-
-.form-group input:focus,
-.form-group select:focus {
-    outline: none;
-    border-color: #c53030;
-    box-shadow: 0 0 0 3px rgba(197, 48, 48, 0.1);
-}
-
-.btn-submit {
-    width: 100%;
-    padding: 0.85rem;
-    background-color: #1a365d;
-    color: white;
-    border: none;
+    padding: 10px;
+    border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.2s;
-}
-
-.btn-submit:hover {
-    background-color: #c53030;
-}
-
-.map-wrapper {
-    border-radius: 6px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
-
-/* FOOTER */
-.footer-section {
-    background-color: #1a365d;
-    color: white;
-    padding: 2rem;
-}
-
-.copyright {
-    font-size: 0.85rem;
-    opacity: 0.7;
-}
-
-/* RESPONSIVE DESIGN */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-
-    .visual-container, .contact-grid {
-        flex-direction: column;
-        gap: 2rem;
-    }
-
-    .hero-content h1 {
-        font-size: 2.25rem;
-    }
-
-    .card.featured {
-        transform: none;
-    }
-
-    .form-container, .map-container {
-        padding: 1.5rem;
-        width: 100%;
-    }
 }
