@@ -169,11 +169,16 @@
         Compila i campi per richiedere informazioni e verificare la disponibilità oraria.
     </p>
 
-    <form id="infoForm" action="https://web3forms.com" method="POST">
+    <!-- Endpoint corretto -->
+    <form id="infoForm" action="https://api.web3forms.com/submit" method="POST">
 
+        <!-- Configurazione Web3Forms -->
         <input type="hidden" name="access_key" value="5abce6bd-347d-417c-be07-fcf5e073c491">
         <input type="hidden" name="subject" value="Nuova richiesta - Studio Arco Da Monte">
         <input type="hidden" name="from_name" value="Sito Studio Arco Da Monte">
+        
+        <!-- Campo Honeypot Antispam (Invisibile agli utenti, blocca i bot) -->
+        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
         <div class="form-group">
             <label for="nome">Nome dello studente *</label>
