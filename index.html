@@ -166,69 +166,33 @@
     <h2>Richiedi informazioni</h2>
 
     <p class="form-subtitle">
-        Compila i campi per richiedere informazioni
-        e verificare la disponibilità oraria.
+        Compila i campi per richiedere informazioni e verificare la disponibilità oraria.
     </p>
 
-    <form
-        id="infoForm"
-        action="https://api.web3forms.com/submit"
-        method="POST">
+    <form id="infoForm" action="https://web3forms.com" method="POST">
 
-        <input
-            type="hidden"
-            name="access_key"
-            value="5abce6bd-347d-417c-be07-fcf5e073c491">
-
-        <input
-            type="hidden"
-            name="subject"
-            value="Nuova richiesta - Studio Arco Da Monte">
-
-        <input
-            type="hidden"
-            name="from_name"
-            value="Sito Studio Arco Da Monte">
-
-        <!-- 1. QUESTA È LA RIGA SALVAVITA PER SBLOCCARE REGISTER.IT -->
-        <input type="hidden" name="reply_to" value="email">
+        <input type="hidden" name="access_key" value="5abce6bd-347d-417c-be07-fcf5e073c491">
+        <input type="hidden" name="subject" value="Nuova richiesta - Studio Arco Da Monte">
+        <input type="hidden" name="from_name" value="Sito Studio Arco Da Monte">
 
         <div class="form-group">
             <label for="nome">Nome dello studente *</label>
-            <input
-                type="text"
-                name="name"
-                id="nome"
-                placeholder="Il tuo nome"
-                autocomplete="name"
-                required>
+            <input type="text" name="name" id="nome" placeholder="Il tuo nome" autocomplete="name" required>
         </div>
 
         <div class="form-group">
             <label for="email">Email di contatto *</label>
-            <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="La tua email"
-                autocomplete="email"
-                required>
+            <input type="email" name="email" id="email" placeholder="La tua email" autocomplete="email" required>
         </div>
 
         <div class="form-group">
             <label for="telefono">Telefono</label>
-            <input
-                type="tel"
-                name="Telefono"
-                id="telefono"
-                placeholder="Il tuo numero di telefono"
-                autocomplete="tel">
+            <input type="tel" name="Telefono" id="telefono" placeholder="Il tuo numero di telefono" autocomplete="tel">
         </div>
 
         <div class="form-group">
             <label for="fasciaEta">Fascia d'età *</label>
-            <!-- 2. CORRETTO: "fascia_eta" (senza spazi né accenti) -->
-            <select name="fascia_eta" id="fasciaEta" required>
+            <select name="Fascia d'età" id="fasciaEta" required>
                 <option value="" disabled selected>Seleziona la fascia d'età</option>
                 <option value="Scuola elementare">Scuola elementare</option>
                 <option value="Scuola media">Scuola media</option>
@@ -239,8 +203,7 @@
 
         <div class="form-group">
             <label for="giornoPreferito">Giorno preferito *</label>
-            <!-- 3. CORRETTO: "giorno_preferito" (senza spazi né accenti) -->
-            <select name="giorno_preferito" id="giornoPreferito" required>
+            <select name="Giorno preferito" id="giornoPreferito" required>
                 <option value="" disabled selected>Seleziona il giorno</option>
                 <option value="Lunedì">Lunedì</option>
                 <option value="Martedì">Martedì</option>
@@ -253,8 +216,7 @@
 
         <div class="form-group">
             <label for="fasciaOraria">Fascia oraria preferita *</label>
-            <!-- 4. CORRETTO: "fascia_oraria" (senza spazi) -->
-            <select name="fascia_oraria" id="fasciaOraria" required>
+            <select name="Fascia oraria" id="fasciaOraria" required>
                 <option value="" disabled selected>Seleziona l'orario</option>
                 <option value="Mattina (9:00 - 13:00)">Mattina (9:00 - 13:00)</option>
                 <option value="Pomeriggio (14:00 - 17:00)">Pomeriggio (14:00 - 17:00)</option>
@@ -266,6 +228,7 @@
 
     </form>
 </div>
+
 
 
             <!-- DOVE SIAMO & MAPPA GOOGLE -->
